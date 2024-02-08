@@ -82,5 +82,39 @@ let time1 = time(isNight: isNightTime)
 print(time1)
 
 //7
+func number(num: Int) -> Bool {
+    if num <= 1 {
+        return false
+    }
+    for i in 2..<num {
+        if num % i == 0 {
+            return true
+        }
+    }
+    return true
+}
 
+let num = 66
+let number1 = number(num:66)
+print(number1)
+
+//8
+
+func season(month: Int) -> String {
+    switch month {
+    case 12, 1, 2:
+        return "Зима"
+    case 3, 4, 5:
+        return "Весна"
+    case 6, 7, 8:
+        return "Лето"
+    case 9, 10, 11:
+        return "Осень"
+    default:
+        return "Ошибка"
+    }
+}
+let month = 5
+let season1 = season(month: month)
+print("Номер месяца \(month) относится к времени года: \(season1)")
 
